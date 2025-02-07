@@ -1,1 +1,1 @@
-export const CartWidget = () => <span>carrito</span>
+export const CartWidget = () => <mark><span>carrito 10 items</span></mark>
