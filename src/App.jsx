@@ -1,6 +1,8 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { NavBar } from './components/NavBar'
-import { ListContainer } from './components/ItemListContainer'
-import './App.css'
+import { ItemListContainer} from "./components/ItemListContainer"
+
+
 
 function App() {
 
@@ -8,7 +10,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ListContainer titulo ="Lion" texto="Miniatura" image="imagen" />
+    <ItemListContainer/>
     </>
   )
 }
