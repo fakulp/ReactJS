@@ -4,14 +4,24 @@ import { ItemListContainer} from "./components/ItemListContainer"
 
 
 
+
 function App() {
 
 
   return (
-    <>
+
+    <BrowserRouter>
     <NavBar/>
-    <ItemListContainer/>
-    </>
+    <Routes>
+
+    <Route path="/" element={<ItemListContainer/>} />
+    <Route path="/faccion/:id" element={<ItemListContainer/>} />
+    <Route path="*" element="404" />
+
+
+    </Routes>
+    </BrowserRouter>
+
   )
 }
 
