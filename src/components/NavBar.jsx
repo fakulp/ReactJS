@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 export const NavBar = () => {
     return (
 <>
-    <Navbar expand="lg" className="bg-warning">
+    <Navbar expand="lg" className="bg-warning justify-content-center">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

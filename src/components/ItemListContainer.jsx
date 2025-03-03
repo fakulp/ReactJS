@@ -6,14 +6,15 @@ import { Container } from "react-bootstrap"
 import {items} from "../data/data"
 import { ItemList } from "./ItemList";
 
-const {id} = useParams
+
 
 
 export const ItemListContainer = () => { 
   
   const[productos, setProductos]= useState([]);
   const[load, setLoad]= useState(true);
-
+  const {id} = useParams();
+  
   useEffect(()=> {
     new Promise ((resolve,reject) => setTimeout (() => resolve (items),500)).then((anwser) => { 
       if(!id) {setProductos(anwser)
