@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
   if(load) return "Cargando";
 
 return (
-  <Container className="d-flex mt-4">
+  <Container className="row d-flex mt-4 justify-content-center gap-3">
     <ItemList items= {productos} />
   </Container>
   )
