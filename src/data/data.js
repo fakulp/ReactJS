@@ -58,16 +58,51 @@ export const items =[
         {
           id: 9,
           titulo: "Impulsor",
-          descripcion: "El Impulsor es un transporte de asalto antigravedad ligero y de rápido movimiento preferido por las fuerzas Astartes de Vanguardia.",
+          descripcion: "Como corresponde a un vehículo que suele ser el único apoyo para su escuadra en territorio hostil, el Impulsor puede ser rápidamente reequipado con gran variedad de armas y sistemas defensivos. Para las tropas que esperan una gran potencia de fuego, el vehículo puede incorporar un avanzado escudo de energía sobre el casco que lo enfunda en un potente y brillante campo refractor. ",
           faccion: "Astartes",
           imagen: "/images/Impulsor.jpeg"
         },
         {
           id: 10,
           titulo: "Dreadnought Redemptor",
-          descripcion: "Los Dreadnoughts Redentor son gigantescos ingenios bélicos que aplastan huesos y rompen cráneos cuando se abren paso a golpes a través de las filas enemigas. Más altos, más corpulentos y más astutamente diseñados que los Dreadnoughts tradicionales.",
+          descripcion: "Se dice que algunos Dreadnoughts tienen incluso decenas de miles de años y datan de la Gran Cruzada, cuando el Emperador todavía caminaba entre los suyos. La construcción de un Dreadnought es algo poco común debido a que los conocimientos arcanos necesarios para ello se fueron convirtiendo en mitología ritualizada, así que cada Dreadnought de un Capítulo es una reliquia valiosísima.",
           faccion: "Astartes",
           imagen: "/images/Dreadnought.jpeg"
+        },
+        {
+          id: 11,
+          titulo: "Capitan Escudo con armadura Allarus",
+          descripcion: "",
+          faccion: "Custodes",
+          imagen: ""
+        },
+        {
+          id: 12,
+          titulo: "Custodes Guardias",
+          descripcion: "",
+          faccion: "Custodes",
+          imagen: ""
+        },
+        {
+          id: 13,
+          titulo: "Custodes Guardianes",
+          descripcion: "",
+          faccion: "Custodes",
+          imagen: ""
+        },
+        {
+          id: 14,
+          titulo: "Campeon de la espada",
+          descripcion: "",
+          faccion: "Custodes",
+          imagen: ""
+        },
+        {
+          id: 15,
+          titulo: "Allarus custodes",
+          descripcion: "",
+          faccion: "Custodes",
+          imagen: ""
         },
 
       ];
