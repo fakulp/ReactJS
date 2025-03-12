@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import {items} from "../data/data";
 import Card from 'react-bootstrap/Card';
 import { ItemCounter } from "./ItemCounter";
+import { CartContext } from "../contexts/CartContext";
 
 
 
@@ -14,6 +15,10 @@ const[producto, setProducto]= useState([]);
 const[load, setLoad]= useState(true);
 const {id} = useParams();
 
+
+const {onAdd} = useContext(CartContext)
+
+
 useEffect(()=> {
     new Promise ((resolve,reject) => setTimeout (() => resolve (items),500)).then((anwser) => { 
         const finded = anwser.find ((item) => item.id === Number(id) );
@@ -21,6 +26,11 @@ useEffect(()=> {
     })
     .finally(()=> setLoad(false));
 },[id]);
+
+const add = (contador) => {
+    onAdd({...producto, contador});
+}
+
 if(load) return "Cargando";
 
 return (
@@ -32,7 +42,7 @@ return (
             <Card.Text className='text-warning'>{producto.faccion}</Card.Text>
             <Card.Text className='text-warning'>{producto.descripcion}</Card.Text>
         </Card.Body>
-        <ItemCounter className="justify-content-center"/>
+        <ItemCounter stock={producto.stock} add={add}/>
 </Card>
 </Container>
 )
