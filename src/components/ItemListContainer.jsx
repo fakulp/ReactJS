@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import '../css/app.css';
 
 import { Container } from "react-bootstrap"
 import {items} from "../data/data"
@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
   if(load) return "Cargando";
 
 return (
-  <Container className="row d-flex mt-4 justify-content-center gap-3">
+  <Container className="fondo row d-flex mt-4 justify-content-center gap-3">
     <ItemList items= {productos} />
   </Container>
   )

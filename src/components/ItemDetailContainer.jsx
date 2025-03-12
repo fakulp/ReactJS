@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import {items} from "../data/data";
 import Card from 'react-bootstrap/Card';
+import { ItemCounter } from "./ItemCounter";
 
 
 
@@ -24,13 +25,14 @@ if(load) return "Cargando";
 
 return (
 <Container className="d-flex mt-4 justify-content-center">
-<Card  style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={producto.imagen} />
-        <Card.Body>
-            <Card.Title>{producto.titulo}</Card.Title>
-            <Card.Text>{producto.faccion}</Card.Text>
-            <Card.Text>{producto.descripcion}</Card.Text>
+<Card className="  bg-gradient bg-transparent border-warning" style={{ width: '18rem' }}>
+    <Card.Img className="mt-2" variant="top" src={producto.imagen} />
+        <Card.Body className="">
+            <Card.Title className='text-warning'>{producto.titulo}</Card.Title>
+            <Card.Text className='text-warning'>{producto.faccion}</Card.Text>
+            <Card.Text className='text-warning'>{producto.descripcion}</Card.Text>
         </Card.Body>
+        <ItemCounter className="justify-content-center"/>
 </Card>
 </Container>
 )
