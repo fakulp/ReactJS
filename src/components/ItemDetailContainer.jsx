@@ -7,15 +7,10 @@ import { ItemCounter } from "./ItemCounter";
 import { CartContext } from "../contexts/CartContext";
 
 
-
-
 export const ItemDetailContainer = () => { 
-
 const[producto, setProducto]= useState([]);
 const[load, setLoad]= useState(true);
 const {id} = useParams();
-
-
 const {onAdd} = useContext(CartContext)
 
 
@@ -41,6 +36,7 @@ return (
             <Card.Title className='text-warning'>{producto.titulo}</Card.Title>
             <Card.Text className='text-warning'>{producto.faccion}</Card.Text>
             <Card.Text className='text-warning'>{producto.descripcion}</Card.Text>
+            <Card.Text className='text-warning'>{producto.precio}</Card.Text>
         </Card.Body>
         <ItemCounter stock={producto.stock} add={add}/>
 </Card>

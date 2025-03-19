@@ -12,7 +12,9 @@ export const Provider = ({children}) => {
     };
     console.log (productos);
 
-    return <CartContext.Provider value={{productos , onAdd}}>
+    const onRemove = () => setProductos([]);
+
+    return <CartContext.Provider value={{productos , onAdd, onRemove}}>
     {children}
     </CartContext.Provider>
 }
