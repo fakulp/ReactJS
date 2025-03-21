@@ -13,7 +13,6 @@ const { onRemove } = useContext(CartContext);
 
 
 
-
   return (
     <div className="d-flex  p-3">
       <Card style={{ width: "28rem" }} className="shadow-lg p-4 bg-dark text-white">
@@ -29,8 +28,8 @@ const { onRemove } = useContext(CartContext);
             <span>Total</span>
             <span>$ X</span>
           </div>
-          <Button variant="warning" className="w-100 mt-3">
-            Continuar compra
+          <Button onClick={handleOrder} variant="warning" className="w-100 mt-3">
+            Comprar
           </Button>
         <Button onClick={onRemove} variant="warning" className="w-100 mt-3">
             Vaciar
