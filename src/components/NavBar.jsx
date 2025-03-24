@@ -15,7 +15,7 @@ export const NavBar = () => {
             <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
             <Nav.Link to="/faccion/Custodes" as={NavLink}>Custodes</Nav.Link>
             <Nav.Link to="/faccion/Astartes" as={NavLink}>Marines Espaciales</Nav.Link>
-            <Nav.Link to="/cart" as={NavLink}>Mis compras</Nav.Link>
+            <Nav.Link to="/miscompras" as={NavLink}>Mis compras</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
