@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button';
 
 
 
-
-
 export const ItemCounter = ({stock, add}) => {
 const[contador,setContador] = useState(1);
 

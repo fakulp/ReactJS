@@ -37,7 +37,7 @@ if(load) return "Cargando";
 return (
 <Container className=" mt-3 mb-3 d-flex mt-4 justify-content-center">
 <Card className=" bg-gradient bg-transparent border-warning" style={{ width: '18rem' }}>
-    <Card.Img className="mt-2" variant="top" src={producto.imagen} />
+<Card.Img style={{ width: '100%', height: '200px', objectFit: 'cover' }} className='mt-1 gap-3' variant="top" src={producto.imagen} />
         <Card.Body className="">
             <Card.Title className='text-warning'>{producto.titulo}</Card.Title>
             <Card.Text className='text-warning'>{producto.faccion}</Card.Text>

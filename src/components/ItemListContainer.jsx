@@ -20,7 +20,7 @@ export const ItemListContainer = () => {
 
 useEffect(()=> {
     const q =  id ? query(collection(db, "items"),where("faccion", "==", id)) 
-    : query(collection(db, "items"));
+                  : query(collection(db, "items"));
 
 getDocs(q).then((snapshot) => {
 if (snapshot.size === 0) console.log("no results");

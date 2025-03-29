@@ -28,7 +28,7 @@ const { onRemove } = useContext(CartContext);
             <span>Total</span>
             <span>$ X</span>
           </div>
-          <Button onClick={handleOrder} variant="warning" className="w-100 mt-3">
+          <Button  variant="warning" className="w-100 mt-3">
             Comprar
           </Button>
         <Button onClick={onRemove} variant="warning" className="w-100 mt-3">

@@ -23,10 +23,7 @@ export const CartWidget = () => {
                         <Card
                             className="bg-gradient bg-transparent border-warning"
                             style={{ width: "18rem" }}>
-                            <Card.Img
-                                className="mt-2"
-                                variant="top"
-                                src={producto.imagen}/>
+                            <Card.Img style={{ width: '100%', height: '200px', objectFit: 'cover' }} className='mt-1 gap-3' variant="top" src={producto.imagen} />
                             <Card.Body>
                                 <Card.Title className="text-warning">
                                     {producto.titulo}
