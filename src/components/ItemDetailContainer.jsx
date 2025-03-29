@@ -1,8 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import {items} from "../data/data";
+//----firebase-----
+import { getFirestore, getDoc, doc } from "firebase/firestore";
+//----firebase-----
+//-- react boostrap
 import Card from 'react-bootstrap/Card';
+//-- react boostrap
 import { ItemCounter } from "./ItemCounter";
 import { CartContext } from "../contexts/CartContext";
 
@@ -15,9 +19,11 @@ const {onAdd} = useContext(CartContext)
 
 
 useEffect(()=> {
-    new Promise ((resolve,reject) => setTimeout (() => resolve (items),500)).then((anwser) => { 
-        const finded = anwser.find ((item) => item.id === Number(id) );
-        setProducto(finded);
+    const db = getFirestore();
+
+    const refDoc = doc(db, "items", id);
+    getDoc(refDoc).then((snapshot) => {
+        setProducto({ id: snapshot.id, ...snapshot.data() });
     })
     .finally(()=> setLoad(false));
 },[id]);
@@ -29,14 +35,15 @@ const add = (contador) => {
 if(load) return "Cargando";
 
 return (
-<Container className="d-flex mt-4 justify-content-center">
-<Card className="  bg-gradient bg-transparent border-warning" style={{ width: '18rem' }}>
-    <Card.Img className="mt-2" variant="top" src={producto.imagen} />
+<Container className=" mt-3 mb-3 d-flex mt-4 justify-content-center">
+<Card className=" bg-gradient bg-transparent border-warning" style={{ width: '18rem' }}>
+<Card.Img style={{ width: '100%', height: '200px', objectFit: 'cover' }} className='mt-1 gap-3' variant="top" src={producto.imagen} />
         <Card.Body className="">
             <Card.Title className='text-warning'>{producto.titulo}</Card.Title>
             <Card.Text className='text-warning'>{producto.faccion}</Card.Text>
             <Card.Text className='text-warning'>{producto.descripcion}</Card.Text>
-            <Card.Text className='text-warning'>{producto.precio}</Card.Text>
+            <Card.Text className='text-warning'>Stock: {producto.stock}</Card.Text>
+            <Card.Text className='text-warning'>Precio por unidad: {producto.precio}</Card.Text>
         </Card.Body>
         <ItemCounter stock={producto.stock} add={add}/>
 </Card>
