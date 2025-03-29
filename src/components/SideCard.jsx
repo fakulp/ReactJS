@@ -1,4 +1,5 @@
 import React from "react";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { Card, Button, } from "react-bootstrap";
 import { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
