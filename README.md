@@ -11,3 +11,6 @@ Se utilizaron las siguientes dependencias:
  react-bootstrap  2.10.9
  react-dom ^18.3.1
  react-router-dom 7.2.0
+
+
+ Luego de instalar las dependencias inicializar la app con npm run dev.
