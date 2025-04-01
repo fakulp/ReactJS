@@ -57,7 +57,6 @@ const handleChange = (event) =>{
 }
 
 
-
   return (
     <div className="d-flex  p-3">
       <Card style={{ width: "28rem" }} className="shadow-lg p-4 bg-dark text-white">
@@ -86,6 +85,7 @@ const handleChange = (event) =>{
             <span>Total</span>
             <span>$ ${total()}</span>
           </div>
+
 
           <div>
           <InputGroup className="mb-3">
