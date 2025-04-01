@@ -34,7 +34,7 @@ export const CartWidget = () => {
                                 <Card.Text className="text-warning"> $
                                     {producto.precio}
                                 </Card.Text>
-                                <Card.Text className="text-warning">Total: $X</Card.Text>
+                                <Card.Text className="text-warning">Total: $ ${producto.contador * producto.precio}</Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
