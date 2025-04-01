@@ -1,8 +1,13 @@
-# React + Vite
+# Dungeon Chest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicacion es un carrito de compras de miniaturas funciona llevando articulos al carrito ,cada articulo esta separado por peticion en un maximo de 5 unidades.
 
-Currently, two official plugins are available:
+Se utilizaron las siguientes dependencias:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ bootstrap  5.3.3
+ bootstrap-icons  1.11.3
+ firebase  11.4.0
+ react  18.3.1
+ react-bootstrap  2.10.9
+ react-dom ^18.3.1
+ react-router-dom 7.2.0

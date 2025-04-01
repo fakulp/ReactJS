@@ -43,7 +43,7 @@ const orderCollection = collection(db, "orders");
 
 addDoc(orderCollection, order).then(({ id }) => {
   if (id) {
-    alert("Su orden: " + id + " ha sido completada!");
+    alert("Su orden: ¡Ha sido completada!");
   }
 }).finally(() => {
   setComprador(valoresIniciales);
