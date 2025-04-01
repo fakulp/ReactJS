@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 
 export const Footer = () => {
 return (
-    <footer className=" bg-warning text-dark py-4 mt-5">
+    <div className="wrapper">
+    <footer className="footer bg-warning text-dark py-4 mt-5">
     <Container>
         <Row>
         <Col md={4} className="text-center text-md-start">
@@ -32,6 +33,7 @@ return (
         </Row>
     </Container>
     </footer>
+    </div>
 );
 }
 

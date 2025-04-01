@@ -43,7 +43,7 @@ const orderCollection = collection(db, "orders");
 
 addDoc(orderCollection, order).then(({ id }) => {
   if (id) {
-    alert("Su orden: " + id + " ha sido completada!");
+    alert("Su orden: ¡Ha sido completada!");
   }
 }).finally(() => {
   setComprador(valoresIniciales);
@@ -55,7 +55,6 @@ addDoc(orderCollection, order).then(({ id }) => {
 const handleChange = (event) =>{
   setComprador ({...comprador, [event.target.name]: event.target.value})
 }
-
 
 
   return (
@@ -86,6 +85,7 @@ const handleChange = (event) =>{
             <span>Total</span>
             <span>$ ${total()}</span>
           </div>
+
 
           <div>
           <InputGroup className="mb-3">

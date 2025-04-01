@@ -8,8 +8,7 @@ export const Item = ({ item }) => (
             style={{ width: '100%', height: '200px', objectFit: 'cover' }} 
             className='mt-1' 
             variant="top" 
-            src={item.imagen} 
-        />
+            src={item.imagen} />
         <Card.Body className="d-flex flex-column flex-grow-1">
             <Card.Title className='text-warning'>{item.titulo}</Card.Title>
             <Card.Text className='text-warning'>{item.faccion}</Card.Text>
